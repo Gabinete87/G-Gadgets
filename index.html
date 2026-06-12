@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Gadgets | Tecnología Eficiente</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="top-banner">
+        <p><i class="fas fa-truck"></i> ¡Envíos 100% GRATIS en Rosario! Conocé nuestro Plan de Compra en cuotas.</p>
+    </div>
+
+    <header>
+        <div class="navbar-container">
+            <a href="#" class="logo">G-<span>Gadgets</span></a>
+            <nav>
+                <a href="#productos">Productos</a>
+                <a href="#plan-compra">Plan de Compra</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <div class="cart-icon" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Tecnología inteligente para tu día a día</h1>
+            <p>Gadgets diseñados para potenciar tu productividad. Con cada compra, apoyás directamente a familias de nuestra comunidad en situación vulnerable.</p>
+            <a href="#productos" class="btn-primary">Ver Catálogo</a>
+        </div>
+    </section>
+
+    <section id="plan-compra" class="plan-section">
+        <h2>¿Qué es el <span class="text-orange">Plan de Compra</span>?</h2>
+        <p class="plan-subtitle">Pensado para que cuides tu bolsillo. Pagá a tu ritmo sin necesidad de tarjeta de crédito.</p>
+        <div class="plan-steps">
+            <div class="step">
+                <i class="fas fa-laptop-house"></i>
+                <h3>1. Elegí tu Gadget</h3>
+                <p>Seleccionás el producto que necesitás de nuestro catálogo virtual.</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-wallet"></i>
+                <h3>2. Aboná en Cuotas</h3>
+                <p>Transferís o pagás en efectivo las cuotas fijadas según tus posibilidades.</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-box-open"></i>
+                <h3>3. Retirá o Recibí</h3>
+                <p>Al completar el total, te lo enviamos gratis a tu casa en Rosario.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="productos" class="catalog-section">
+        <h2>Nuestros <span class="text-blue">Gadgets</span></h2>
+        <div class="products-grid">
+            
+            <div class="product-card">
+                <div class="product-badge">¡El más buscado!</div>
+                <div class="product-img">
+                    <i class="fas fa-laptop" style="font-size: 4rem; color: var(--blue-light);"></i>
+                </div>
+                <div class="product-info">
+                    <h3>Soporte Ergonómico para Notebook</h3>
+                    <p class="description">Regulable en altura, ideal para cuidar tu postura y mejorar la refrigeración de tu equipo.</p>
+                    <div class="price-container">
+                        <span class="price">$15.000</span>
+                        <span class="payment-methods">Efectivo / Transferencia</span>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart('Soporte Ergonómico para Notebook', 15000)">
+                        <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                    </button>
+                </div>
+            </div>
+
+            </div>
+    </section>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+            <i class="fas fa-times" onclick="toggleCart()" style="cursor: pointer;"></i>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <p class="empty-cart-msg">El carrito está vacío.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">Total: <span id="cart-total-val">$0</span></div>
+            <button class="btn-checkout" onclick="checkoutWhatsApp()">
+                <i class="fab fa-whatsapp"></i> Finalizar por WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 G-Gadgets - Rosario, Argentina. Todos los derechos reservados.</p>
+        <p class="solidario-footer"><i class="fas fa-heart text-orange"></i> Un proyecto con impacto social.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

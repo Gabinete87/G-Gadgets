@@ -1,0 +1,283 @@
+:root {
+    --bg-dark: #0f111a;
+    --bg-card: #171a26;
+    --blue-deep: #1a365d;
+    --blue-light: #0072ff;
+    --orange: #ff6a00;
+    --text-white: #ffffff;
+    --text-muted: #a0aec0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+}
+
+/* BANNER SUPERIOR */
+.top-banner {
+    background: linear-gradient(90deg, var(--orange), #ff4500);
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* NAVBAR */
+header {
+    background-color: rgba(23, 26, 38, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--blue-deep);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text-white);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--orange);
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--blue-light);
+}
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+.cart-icon span {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--orange);
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, var(--bg-dark) 50%, var(--blue-deep)), url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1964&auto=format&fit=crop') no-repeat center/cover;
+    background-blend-mode: multiply;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background-color: var(--orange);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e05d00;
+}
+
+/* SECCION PLAN DE COMPRA */
+.plan-section, .catalog-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.plan-subtitle {
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.plan-steps {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.step {
+    background-color: var(--bg-card);
+    flex: 1;
+    min-width: 250px;
+    padding: 30px;
+    border-radius: 10px;
+    border-top: 4px solid var(--orange);
+}
+
+.step i {
+    font-size: 2.5rem;
+    color: var(--orange);
+    margin-bottom: 15px;
+}
+
+.step h3 { margin-bottom: 10px; }
+.step p { color: var(--text-muted); font-size: 0.95rem; }
+
+/* CATALOGO */
+.products-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.product-card {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    width: 320px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--blue-light);
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--blue-light);
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.product-img {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-info { padding: 20px; text-align: left; }
+.product-info h3 { font-size: 1.2rem; margin-bottom: 10px; }
+.product-info .description { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px; height: 40px; overflow: hidden; }
+
+.price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.price { font-size: 1.5rem; font-weight: bold; color: var(--orange); }
+.payment-methods { font-size: 0.75rem; color: var(--text-muted); background: #222738; padding: 3px 8px; border-radius: 4px; }
+
+.btn-add-cart {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid var(--blue-light);
+    color: var(--blue-light);
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-add-cart:hover {
+    background-color: var(--blue-light);
+    color: white;
+}
+
+/* CARRITO FLOTANTE (SIDEBAR) */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 350px;
+    height: 100vh;
+    background-color: var(--bg-card);
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease;
+    padding: 20px;
+}
+
+.cart-sidebar.open { right: 0; }
+.cart-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--blue-deep); padding-bottom: 15px; }
+.cart-items { flex: 1; overflow-y: auto; margin-top: 20px; }
+.cart-footer { border-top: 1px solid var(--blue-deep); padding-top: 15px; }
+.cart-total { font-size: 1.2rem; font-weight: bold; margin-bottom: 15px; display: flex; justify-content: space-between; }
+
+.btn-checkout {
+    width: 100%;
+    background-color: #25D366; /* Verde WhatsApp */
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* CLASES DE UTILIDAD */
+.text-orange { color: var(--orange); }
+.text-blue { color: var(--blue-light); }
+
+/* FOOTER */
+footer { background-color: #0b0d13; padding: 30px; text-align: center; font-size: 0.9rem; color: var(--text-muted); border-top: 1px solid var(--blue-deep); }
+.solidario-footer { margin-top: 10px; font-size: 0.85rem; }
