@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>G-Gadgets | Tecnología Eficiente</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
             <nav>
                 <a href="#productos">Productos</a>
                 <a href="#plan-compra">Plan de Compra</a>
-                <a href="#contacto">Contacto</a>
+                <a href="https://wa.me/5493412015514?text=Hola%20G-Gadgets!%20Tengo%20una%20consulta." target="_blank">Contacto</a>
             </nav>
             <div class="cart-icon" onclick="toggleCart()">
                 <i class="fas fa-shopping-cart"></i>
@@ -65,22 +65,58 @@
             <div class="product-card">
                 <div class="product-badge">¡El más buscado!</div>
                 <div class="product-img">
-                    <i class="fas fa-laptop" style="font-size: 4rem; color: var(--blue-light);"></i>
+                    <img src="soporte.jpg" alt="Soporte Ergonómico para Notebook">
                 </div>
                 <div class="product-info">
                     <h3>Soporte Ergonómico para Notebook</h3>
                     <p class="description">Regulable en altura, ideal para cuidar tu postura y mejorar la refrigeración de tu equipo.</p>
                     <div class="price-container">
-                        <span class="price">$15.000</span>
+                        <span class="price">$22.000</span>
                         <span class="payment-methods">Efectivo / Transferencia</span>
                     </div>
-                    <button class="btn-add-cart" onclick="addToCart('Soporte Ergonómico para Notebook', 15000)">
+                    <button class="btn-add-cart" onclick="addToCart('Soporte Ergonómico para Notebook', 22000)">
                         <i class="fas fa-cart-plus"></i> Agregar al Carrito
                     </button>
                 </div>
             </div>
 
+            <div class="product-card">
+                <div class="product-badge">Premium</div>
+                <div class="product-img">
+                    <img src="soporteCal.jpg" alt="Soporte Celular Aluminio">
+                </div>
+                <div class="product-info">
+                    <h3>Soporte Celular Aluminio</h3>
+                    <p class="description">Diseño minimalista y ultra resistente. Ideal para videollamadas y tener tu pantalla siempre a la vista.</p>
+                    <div class="price-container">
+                        <span class="price">$22.000</span>
+                        <span class="payment-methods">Efectivo / Transferencia</span>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart('Soporte Celular Aluminio', 22000)">
+                        <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                    </button>
+                </div>
             </div>
+
+            <div class="product-card">
+                <div class="product-badge">Novedad</div>
+                <div class="product-img">
+                    <img src="soporteTal.jpg" alt="Soporte Tablet Aluminio">
+                </div>
+                <div class="product-info">
+                    <h3>Soporte Tablet Aluminio</h3>
+                    <p class="description">Base robusta y antideslizante para tablets de cualquier tamaño. Perfecto para estudiar o trabajar.</p>
+                    <div class="price-container">
+                        <span class="price">$20.000</span>
+                        <span class="payment-methods">Efectivo / Transferencia</span>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart('Soporte Tablet Aluminio', 20000)">
+                        <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                    </button>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <div id="cart-sidebar" class="cart-sidebar">
@@ -104,6 +140,6 @@
         <p class="solidario-footer"><i class="fas fa-heart text-orange"></i> Un proyecto con impacto social.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
