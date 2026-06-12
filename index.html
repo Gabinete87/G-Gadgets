@@ -10,7 +10,7 @@
 <body>
 
     <div class="top-banner">
-        <p><i class="fas fa-truck"></i> ¡Envíos 100% GRATIS en Rosario! Conocé nuestro Plan de Compra en cuotas.</p>
+        <p><i class="fas fa-truck"></i> ¡Envíos 100% GRATIS en Rosario! Descuentos especiales en efectivo.</p>
     </div>
 
     <header>
@@ -18,7 +18,7 @@
             <a href="#" class="logo">G-<span>Gadgets</span></a>
             <nav>
                 <a href="#productos">Productos</a>
-                <a href="#plan-compra">Plan de Compra</a>
+                <a href="#medios-pago">Medios de Pago</a>
                 <a href="https://wa.me/5493412015514?text=Hola%20G-Gadgets!%20Tengo%20una%20consulta." target="_blank">Contacto</a>
             </nav>
             <div class="cart-icon" onclick="toggleCart()">
@@ -36,43 +36,24 @@
         </div>
     </section>
 
-    <section id="plan-compra" class="plan-section">
-        <h2>¿Qué es el <span class="text-orange">Plan de Compra</span>?</h2>
-        <p class="plan-subtitle">Pensado para que cuides tu bolsillo. Pagá a tu ritmo sin necesidad de tarjeta de crédito.</p>
-        <div class="plan-steps">
-            <div class="step">
-                <i class="fas fa-laptop-house"></i>
-                <h3>1. Elegí tu Gadget</h3>
-                <p>Seleccionás el producto que necesitás de nuestro catálogo virtual.</p>
-            </div>
-            <div class="step">
-                <i class="fas fa-wallet"></i>
-                <h3>2. Aboná en Cuotas</h3>
-                <p>Transferís o pagás en efectivo las cuotas fijadas según tus posibilidades.</p>
-            </div>
-            <div class="step">
-                <i class="fas fa-box-open"></i>
-                <h3>3. Retirá o Recibí</h3>
-                <p>Al completar el total, te lo enviamos gratis a tu casa en Rosario.</p>
-            </div>
-        </div>
-    </section>
-
     <section id="productos" class="catalog-section">
         <h2>Nuestros <span class="text-blue">Gadgets</span></h2>
         <div class="products-grid">
             
             <div class="product-card">
                 <div class="product-badge">¡El más buscado!</div>
-                <div class="product-img">
+                <div class="product-img" onclick="openModal('notebook')">
                     <img src="soporte.jpg" alt="Soporte Ergonómico para Notebook">
                 </div>
                 <div class="product-info">
-                    <h3>Soporte Ergonómico para Notebook</h3>
+                    <h3 onclick="openModal('notebook')">Soporte Ergonómico para Notebook</h3>
                     <p class="description">Regulable en altura, ideal para cuidar tu postura y mejorar la refrigeración de tu equipo.</p>
                     <div class="price-container">
-                        <span class="price">$22.000</span>
-                        <span class="payment-methods">Efectivo / Transferencia</span>
+                        <div>
+                            <span class="price">$22.000</span>
+                            <span class="price-label">Efectivo</span>
+                        </div>
+                        <span class="payment-methods">Transferencia: $24.200</span>
                     </div>
                     <button class="btn-add-cart" onclick="addToCart('Soporte Ergonómico para Notebook', 22000)">
                         <i class="fas fa-cart-plus"></i> Agregar al Carrito
@@ -82,15 +63,18 @@
 
             <div class="product-card">
                 <div class="product-badge">Premium</div>
-                <div class="product-img">
+                <div class="product-img" onclick="openModal('celular')">
                     <img src="soporteCal.jpg" alt="Soporte Celular Aluminio">
                 </div>
                 <div class="product-info">
-                    <h3>Soporte Celular Aluminio</h3>
+                    <h3 onclick="openModal('celular')">Soporte Celular Aluminio</h3>
                     <p class="description">Diseño minimalista y ultra resistente. Ideal para videollamadas y tener tu pantalla siempre a la vista.</p>
                     <div class="price-container">
-                        <span class="price">$22.000</span>
-                        <span class="payment-methods">Efectivo / Transferencia</span>
+                        <div>
+                            <span class="price">$22.000</span>
+                            <span class="price-label">Efectivo</span>
+                        </div>
+                        <span class="payment-methods">Transferencia: $24.200</span>
                     </div>
                     <button class="btn-add-cart" onclick="addToCart('Soporte Celular Aluminio', 22000)">
                         <i class="fas fa-cart-plus"></i> Agregar al Carrito
@@ -100,15 +84,18 @@
 
             <div class="product-card">
                 <div class="product-badge">Novedad</div>
-                <div class="product-img">
+                <div class="product-img" onclick="openModal('tablet')">
                     <img src="soporteTal.jpg" alt="Soporte Tablet Aluminio">
                 </div>
                 <div class="product-info">
                     <h3>Soporte Tablet Aluminio</h3>
                     <p class="description">Base robusta y antideslizante para tablets de cualquier tamaño. Perfecto para estudiar o trabajar.</p>
                     <div class="price-container">
-                        <span class="price">$20.000</span>
-                        <span class="payment-methods">Efectivo / Transferencia</span>
+                        <div>
+                            <span class="price">$20.000</span>
+                            <span class="price-label">Efectivo</span>
+                        </div>
+                        <span class="payment-methods">Transferencia: $22.000</span>
                     </div>
                     <button class="btn-add-cart" onclick="addToCart('Soporte Tablet Aluminio', 20000)">
                         <i class="fas fa-cart-plus"></i> Agregar al Carrito
@@ -119,6 +106,52 @@
         </div>
     </section>
 
+    <section id="medios-pago" class="plan-section">
+        <h2>Medios de Pago y <span class="text-orange">Envíos</span></h2>
+        <p class="plan-subtitle">Comprá de forma simple, transparente y con entrega local inmediata.</p>
+        <div class="plan-steps">
+            <div class="step">
+                <i class="fas fa-money-bill-wave"></i>
+                <h3>Efectivo (Precio Base)</h3>
+                <p>Abonás al momento de recibir el producto en tu domicilio con el precio más bajo garantizado.</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-university"></i>
+                <h3>Transferencia Bancaria</h3>
+                <p>Podés abonar mediante alias o CBU antes de la entrega (+10% por costos administrativos digitales).</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-wallet"></i>
+                <h3>Plan de Compra</h3>
+                <p>¿No llegás con el total? Consultanos por WhatsApp para ir entregando cuotas y retirarlo al completarlo.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="modal-body-layout">
+                <div class="modal-img-container">
+                    <img id="modal-img" src="" alt="Imagen de producto">
+                </div>
+                <div class="modal-text-container">
+                    <h2 id="modal-title">Título del Producto</h2>
+                    <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 5px;">
+                        <p id="modal-price" class="modal-price-style">$0</p>
+                        <span style="color: var(--text-muted); font-size: 0.9rem;">en Efectivo</span>
+                    </div>
+                    <p id="modal-transfer-price" style="color: var(--text-muted); font-size: 0.95rem; font-weight: 500; margin-bottom: 10px;">o Transferencia: $0</p>
+                    <hr style="border-color: rgba(255,255,255,0.1); margin: 15px 0;">
+                    <h3>Descripción Detallada</h3>
+                    <p id="modal-desc" class="modal-long-desc">Descripción detallada aquí.</p>
+                    <div id="modal-action-container">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="cart-sidebar" class="cart-sidebar">
         <div class="cart-header">
             <h3>Tu Carrito</h3>
@@ -128,9 +161,9 @@
             <p class="empty-cart-msg">El carrito está vacío.</p>
         </div>
         <div class="cart-footer">
-            <div class="cart-total">Total: <span id="cart-total-val">$0</span></div>
+            <div class="cart-total">Total (Efectivo): <span id="cart-total-val">$0</span></div>
             <button class="btn-checkout" onclick="checkoutWhatsApp()">
-                <i class="fab fa-whatsapp"></i> Finalizar por WhatsApp
+                <i class="fab fa-whatsapp"></i> Coordinar Pago y Envío
             </button>
         </div>
     </div>
