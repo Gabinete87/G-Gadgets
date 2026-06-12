@@ -7,7 +7,6 @@ function toggleCart() {
 }
 
 function addToCart(name, price) {
-    // Buscar si el producto ya existe en el carrito
     const existingItem = cart.find(item => item.name === name);
     
     if (existingItem) {
@@ -24,7 +23,6 @@ function updateCartUI() {
     const cartCount = document.getElementById('cart-count');
     const cartTotalVal = document.getElementById('cart-total-val');
     
-    // Si está vacío
     if (cart.length === 0) {
         cartItemsContainer.innerHTML = '<p class="empty-cart-msg">El carrito está vacío.</p>';
         cartCount.innerText = '0';
@@ -60,9 +58,8 @@ function updateCartUI() {
 function checkoutWhatsApp() {
     if (cart.length === 0) return alert('¡Tu carrito está vacío!');
     
-    // Configura acá tu número de teléfono (código de país + área + número sin el 15)
-    // Ejemplo Argentina, Rosario: 549341XXXXXXX
-    const phoneNumber = "5493412345678"; 
+    // Tu número de Rosario asignado correctamente
+    const phoneNumber = "5493412015514"; 
     
     let message = `¡Hola G-Gadgets! 👋 Quiero realizar un pedido:\n\n`;
     
@@ -74,10 +71,8 @@ function checkoutWhatsApp() {
     message += `🛵 *Envío:* Gratis dentro de Rosario.\n\n`;
     message += `¿Me podrían pasar los datos para la transferencia o coordinar un Plan de Compra? Gracias!`;
     
-    // Codificar mensaje para URL
     const urlMessage = encodeURIComponent(message);
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${urlMessage}`;
     
-    // Abrir WhatsApp
     window.open(whatsappUrl, '_blank');
 }
